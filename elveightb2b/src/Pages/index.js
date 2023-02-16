@@ -8,7 +8,9 @@ import {Foils} from "./Foils"
 import {Wings} from "./Wings"
 import {Bars} from "./Bars"
 import {Accesoires} from "./Accesoires"
+import { Backdoor } from "./Backdoor";
+
 import logo from '../pics/Logo-eleveight.png'
 
 
-export {Home, IndexNav, logo, Register, Login, Kites,Boards,Foils,Wings,Bars,Accesoires};
+export {Home, IndexNav, logo, Register, Login, Kites,Boards,Foils,Wings,Bars,Accesoires,Backdoor,};
