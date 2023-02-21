@@ -37,7 +37,7 @@ export const useEleveightDB = (_collection) => {
     };
 
     const addItem = async (doc) =>{
-        dispatch({type: isPending});
+        dispatch({type: "IS_PENDING"});
         try {
             const addDocument = await ref.add({...doc});
 
@@ -53,7 +53,7 @@ export const useEleveightDB = (_collection) => {
     }
 
     const deleteItem = async (id) =>{
-        dispatch({type: isPending});
+        dispatch({type: "IS_PENDING"});
         try {
             await ref.delete(id);
             dispatchIfnotCancelled({
@@ -66,7 +66,7 @@ export const useEleveightDB = (_collection) => {
     };
 
     const updateItem = async (id, update) =>{
-        dispatch({type: isPending});
+        dispatch({type: "IS_PENDING"});
         try {
            const updatedItem = await ref.doc(id).update(update);
             dispatchIfnotCancelled({

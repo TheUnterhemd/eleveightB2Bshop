@@ -11,6 +11,8 @@ import {logo} from '../Pages/index'
 export const IndexNav = ({item}) => {
   const { user } = useAuthContext()
   const { logout , isPending} = useLogout();
+
+
   return (
     <div>
       <nav>

@@ -27,7 +27,8 @@ const logout = async () =>{
 
         dispatch({type:"LOGOUT"});
 
-        navigate("/");
+        window.location.reload(true)
+        
 
 
         if (!isCancelled) {
