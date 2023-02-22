@@ -36,9 +36,10 @@ export const useEleveightDB = (_collection) => {
         }
     };
 
-    const addItem = async (doc) =>{
+    const addItem = async (doc, thumbnail) =>{
         dispatch({type: "IS_PENDING"});
         try {
+            
             const addDocument = await ref.add({...doc});
 
             dispatchIfnotCancelled({
