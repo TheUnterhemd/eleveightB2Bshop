@@ -47,9 +47,13 @@ function App() {
         <Route path="/boards" element={user ? <Boards/>: <Home/>}/>
         <Route path="/boards/:name/*" element={user ? <Item/>: <Home/>}/>
         <Route path="/foils" element={user ? <Foils/>: <Home/>}/>
+        <Route path="/foils/:name/*" element={user ? <Item/>: <Home/>}/>
         <Route path="/wings" element={user ? <Wings/>: <Home/>}/>
+        <Route path="/kwings/:name/*" element={user ? <Item/>: <Home/>}/>
         <Route path="/bars" element={user ? <Bars/>: <Home/>}/>
+        <Route path="/bars/:name/*" element={user ? <Item/>: <Home/>}/>
         <Route path="/accesoires" element={user ? <Accesoires/>: <Home/>}/>
+        <Route path="/accesoires/:name/*" element={user ? <Item/>: <Home/>}/>
         <Route path="/backdoor" element={admin === true ? <Backdoor/>: <Home/>}/>
 
       </Routes>
