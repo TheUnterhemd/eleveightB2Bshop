@@ -1,6 +1,6 @@
 import './App.css';
 import { BrowserRouter,Navlink,Link,Routes, Route } from 'react-router-dom'
-import { Home,IndexNav,Register,Login,Kites,Boards,Foils,Wings,Bars,Accesoires,Backdoor,} from '../src/Pages/index';
+import { Home,IndexNav,Register,Login,Kites,Boards,Foils,Wings,Bars,Accesoires,Backdoor,Item} from '../src/Pages/index';
 
 import { useAuthContext } from './hooks/useAuthContext';
 import { eleveightDB } from './firebase/config';
@@ -43,7 +43,9 @@ function App() {
         <Route path="/register" element={<Register/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="/kites" element={user ? <Kites/>: <Home/>}/>
+        <Route path="/kites/:name/*" element={user ? <Item/>: <Home/>}/>
         <Route path="/boards" element={user ? <Boards/>: <Home/>}/>
+        <Route path="/boards/:name/*" element={user ? <Item/>: <Home/>}/>
         <Route path="/foils" element={user ? <Foils/>: <Home/>}/>
         <Route path="/wings" element={user ? <Wings/>: <Home/>}/>
         <Route path="/bars" element={user ? <Bars/>: <Home/>}/>

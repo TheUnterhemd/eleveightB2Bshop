@@ -47,7 +47,7 @@ export const AddItem = () => {
       return;
     }
     /** To check to file size */
-    if (selected.size > 500000) {
+    if (selected.size > 2000000) {
       setThumbnailError("Image file must be less than 100kb");
       return;
     }

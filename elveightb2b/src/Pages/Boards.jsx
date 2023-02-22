@@ -1,7 +1,32 @@
-import React from 'react'
+import './Boards.css'
+import { useCollection } from '../hooks/useCollection'
+import { Link } from 'react-router-dom';
 
 export const Boards = () => {
+
+  const {documents,error} = useCollection("Inventory",["category", "==", "Board"])
+  
+  
+  const filtered = documents?.reduce((acc,document)=>{
+    const exist = acc.find(item => item.itemName === document.itemName)
+    if(!exist){
+      acc.push({itemName: document.itemName, imgURL: document.imgURL})
+    }
+    return acc
+  },[])
+  
+  
+  
   return (
-    <div>Bords</div>
+    <div className='boards'>
+
+      {filtered?.map((item,index)=>(
+        <Link to={`/boards/${item.itemName}/*`} key={index}>
+        <div className="card">
+          <img src={item.imgURL} alt="" />
+          <h3>{item.itemName}</h3>
+        </div></Link>
+      ))}
+    </div>
   )
 }
