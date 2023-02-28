@@ -1,4 +1,4 @@
-import {createContext, useReducer, useEffect} from 'react';
+import {createContext, useReducer, useEffect,useState} from 'react';
 import {eleveightAuth} from '../firebase/config';
 
 export const AuthContext = createContext();
@@ -17,6 +17,7 @@ export const AuthContextProvider = ({children}) => {
         user:null,
         authIsReady: false,
     });
+    const [cart, setCart] = useState(0);
 
 useEffect(()=> {
     const unsub = eleveightAuth.onAuthStateChanged((user) =>{
@@ -24,8 +25,11 @@ useEffect(()=> {
         unsub();
     })
 },[]);
+
+
+
     return(
-        <AuthContext.Provider value={{ ...state, dispatch }}>
+        <AuthContext.Provider value={{ ...state, dispatch, cart, setCart }}>
         {children}
         </AuthContext.Provider>
     )

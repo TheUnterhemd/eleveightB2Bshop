@@ -3,6 +3,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
+    position: sticky;
 }
 nav div{
     display: flex;
@@ -10,4 +11,21 @@ nav div{
 }
 nav img{
     width: 200px;
+}
+.btn{
+    height: 30px;
+    width: 100px;
+    margin: 20px;
+    transform: skew(-30deg);
+    border-radius: 10px 0px 10px 0px;
+    background-color: #222227;
+    color: #F8F8F8 !important;
+    transition: 0.3s;
+    vertical-align: middle;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color: black;
+    height: 100%;
 }

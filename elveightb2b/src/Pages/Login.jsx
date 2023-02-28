@@ -18,20 +18,19 @@ export const Login = () => {
 
 
   return (
-    <div>
-      <form className="login" onSubmit={handleSubmit}>
-      <h2>Welcome to Elveight B2B</h2>
-      <label>
+    <div className="login">
+      <form className="form" onSubmit={handleSubmit}>
+      <label className="box">
         <span>Email:</span>
         <input type="email" required onChange={(e)=> setEmail(e.target.value)} value={email} />
       </label>
-      <label>
+      <label className="box">
         <span>Password:</span>
         <input type="password" required onChange={(e)=> setPassword(e.target.value)} value={password} />
       </label>
       {!isPending && <button className="btn">Log In</button>}
         {isPending && (
-          <button className="btn" disabled>
+          <button  disabled>
             Loading...
           </button>
         )}

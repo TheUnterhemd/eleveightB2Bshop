@@ -1,0 +1,28 @@
+.header{
+    min-width: 100vw;
+    min-height: 200px;
+    background:linear-gradient(90deg, #025157 0%, #F8F8F800 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    
+}
+
+.item-box{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+}
+.card{
+    width: 150px;
+    overflow: hidden;
+    border: 2px solid grey;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 6px 5px 19px -2px rgba(0,0,0,0.59)
+}
+.card img{
+    width: 100px;
+}

@@ -3,5 +3,29 @@
     display: flex;
     flex-direction: row;
     gap: 1rem;
+    justify-content: space-between;
 
+}
+.header{
+    min-width: 100vw;
+    min-height: 200px;
+    background:linear-gradient(90deg, #025157 0%, #F8F8F800 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;  
+}
+
+.order-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+.pics{
+    display: flex;
+    gap: 1rem;
 }

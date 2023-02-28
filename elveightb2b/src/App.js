@@ -1,6 +1,6 @@
 import './App.css';
-import { BrowserRouter,Navlink,Link,Routes, Route } from 'react-router-dom'
-import { Home,IndexNav,Register,Login,Kites,Boards,Foils,Wings,Bars,Accesoires,Backdoor,Item} from '../src/Pages/index';
+import { BrowserRouter,Routes, Route } from 'react-router-dom'
+import { Home,IndexNav,Register,Login,Kites,Boards,Foils,Wings,Bars,Accesoires,Backdoor,Item, Cart} from '../src/Pages/index';
 
 import { useAuthContext } from './hooks/useAuthContext';
 import { eleveightDB } from './firebase/config';
@@ -42,6 +42,7 @@ function App() {
         <Route path="/" element={<Home/>}/>
         <Route path="/register" element={<Register/>}/>
         <Route path="/login" element={<Login/>}/>
+        <Route path="/cart" element={user ? <Cart/>: <Home/>}/>
         <Route path="/kites" element={user ? <Kites/>: <Home/>}/>
         <Route path="/kites/:name/*" element={user ? <Item/>: <Home/>}/>
         <Route path="/boards" element={user ? <Boards/>: <Home/>}/>
@@ -49,7 +50,7 @@ function App() {
         <Route path="/foils" element={user ? <Foils/>: <Home/>}/>
         <Route path="/foils/:name/*" element={user ? <Item/>: <Home/>}/>
         <Route path="/wings" element={user ? <Wings/>: <Home/>}/>
-        <Route path="/kwings/:name/*" element={user ? <Item/>: <Home/>}/>
+        <Route path="/wings/:name/*" element={user ? <Item/>: <Home/>}/>
         <Route path="/bars" element={user ? <Bars/>: <Home/>}/>
         <Route path="/bars/:name/*" element={user ? <Item/>: <Home/>}/>
         <Route path="/accesoires" element={user ? <Accesoires/>: <Home/>}/>

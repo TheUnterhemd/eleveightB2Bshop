@@ -4,6 +4,7 @@ import { useAuthContext } from "../hooks/useAuthContext";
 import { useEleveightDB } from "../hooks/useEleveightDB";
 import { eleveightStorage } from "../firebase/config";
 import Select from "react-select";
+import "./AddItem.css"
 
 export const AddItem = () => {
     const {addItem, response} = useEleveightDB("Inventory");
@@ -91,37 +92,40 @@ export const AddItem = () => {
     }
  }
   return (
-    <div><form onSubmit={handleSubmit}>
-        <label>
+    <div className="admin-Panel-Add">
+      <form className="addItem" onSubmit={handleSubmit}>
+        <label className="box">
           <span>Category:</span>
           <Select
             options={categories}
             onChange={(option) => setCategory(option)}
           />
         </label>
-    <label>
+    <label className="box">
       <span>Item Name:</span>
       <input type="text" name="name" id="name" value={itemName} onChange={(e)=>setItemName(e.target.value)}/>
     </label>
-    <label>
+    <label className="box">
       <span>Item Size:</span>
       <input type="number" name="size" id="size" value={itemSize} onChange={(e)=>setItemSize(e.target.value)}/>
     </label>
-    <label>
+    <label className="box">
       <span>Item Color:</span>
       <input type="text" name="color" id="color" value={itemColor} onChange={(e)=>setItemColor(e.target.value)}/>
     </label>
-    <label>
+    <label className="box">
       <span>Item Quantity:</span>
       <input type="number" name="quantity" id="quantity" value={itemQuantity} onChange={(e)=>setItemQuantity(e.target.value)} />
     </label>
-    <label>
+    <label className="box">
           <span>Pictures:</span>
           <input type="file" required onChange={handleFileChange} multiple/>
           {/** A box will disply the Thumbnail error */}
           {thumbnailError && <div className="error">{thumbnailError}</div>}
         </label>
-    <button >Add Item</button>
-  </form></div>
+
+    <button className="btn">Add Item</button>
+  </form>
+  </div>
   )
 }

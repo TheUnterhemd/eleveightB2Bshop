@@ -51,10 +51,10 @@ export default function Register() {
   };
 
   return (
-    <div>
+    <div className="register">
       <form className="auth-form" onSubmit={handleSubmit}>
         <h2>Sign Up/ Register</h2>
-        <label>
+        <label className="box">
           <span>Company:</span>
           <input
             type="text"
@@ -63,7 +63,7 @@ export default function Register() {
             value={company}
           />
         </label>
-        <label>
+        <label className="box">
           <span>Tax Number:</span>
           <input
             type="text"
@@ -72,7 +72,7 @@ export default function Register() {
             value={taxNumber}
           />
         </label>
-        <label>
+        <label className="box">
           <span>Region:</span>
           <input
             type="text"
@@ -81,7 +81,7 @@ export default function Register() {
             value={region}
           />
         </label>
-        <label>
+        <label className="box">
           <span>Username:</span>
           <input
             type="text"
@@ -90,13 +90,7 @@ export default function Register() {
             value={displayName}
           />
         </label>
-        <label>
-          <span>Profile Picture:</span>
-          <input type="file" required onChange={handleFileChange} />
-          {/** A box will disply the Thumbnail error */}
-          {thumbnailError && <div className="error">{thumbnailError}</div>}
-        </label>
-        <label>
+        <label className="box">
           <span>Email:</span>
           <input
             type="email"
@@ -105,7 +99,7 @@ export default function Register() {
             value={email}
           />
         </label>
-        <label>
+        <label className="box">
           <span>Password:</span>
           <input
             type="password"
@@ -115,6 +109,12 @@ export default function Register() {
           />
         </label>
         {/** if the Thumbnail does not fulfill our requirement, the button to submit will be disabled */}
+        <label className="box">
+          <span>Profile Picture:</span>
+          <input type="file" required onChange={handleFileChange} />
+          {/** A box will disply the Thumbnail error */}
+          {thumbnailError && <div className="error">{thumbnailError}</div>}
+        </label>
         {thumbnailError && (
           <button className="btn" disabled>
             Sign Up

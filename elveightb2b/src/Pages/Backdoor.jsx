@@ -11,10 +11,10 @@ export const Backdoor = () => {
   return (
     <div className="backdoor">
       <div className="sidebar">
-        <button onClick={()=> setShowAdd(true)}>Add Item</button>
-        <button>Delete Item</button>
-        <button>Orders</button>
-        <button>Users</button>
+        <button className="btn" onClick={()=> setShowAdd(true)}>Add Item</button>
+        <button className="btn">Delete Item</button>
+        <button className="btn">Orders</button>
+        <button className="btn">Users</button>
       </div>
       <div className="main-container">
         {showAdd && <AddItem />}

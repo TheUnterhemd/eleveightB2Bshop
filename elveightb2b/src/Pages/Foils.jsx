@@ -1,4 +1,4 @@
-import './Foils.css'
+import './Style.css'
 import { useCollection } from '../hooks/useCollection'
 import { Link } from 'react-router-dom';
 
@@ -19,14 +19,17 @@ export const Foils = () => {
   
   return (
     <div className='foils'>
-
+      <div className="header">
+        <h1>Feel like Jesus and fly over the water</h1>
+      </div>
+      <div className="item-box">
       {filtered?.map((item,index)=>(
         <Link to={`/foils/${item.itemName}/*`} key={index}>
         <div className="card">
           <img src={item.imgURL} alt="" />
           <h3>{item.itemName}</h3>
         </div></Link>
-      ))}
+      ))}</div>
     </div>
   )
 }

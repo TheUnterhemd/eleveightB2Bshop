@@ -1,4 +1,4 @@
-import './Kites.css'
+import './Style.css'
 import { useCollection } from '../hooks/useCollection'
 import { Link } from 'react-router-dom';
 
@@ -19,7 +19,10 @@ export const Kites = () => {
   
   return (
     <div className='kites'>
+      <div className="header">
+        <h1>SEE THE FUTURE</h1></div>
 
+      <div className="item-box">
       {filtered?.map((item,index)=>(
         <Link to={`/kites/${item.itemName}/*`} key={index}>
         <div className="card">
@@ -27,6 +30,7 @@ export const Kites = () => {
           <h3>{item.itemName}</h3>
         </div></Link>
       ))}
+      </div>
     </div>
   )
 }

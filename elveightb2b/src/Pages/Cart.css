@@ -1,0 +1,34 @@
+.cart-box{
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background-image: url("../pics/front3.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 92.3vh;
+}
+
+.cart-card{
+    
+    border: 2px solid grey;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 6px 5px 19px -2px rgba(0,0,0,0.59);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    background-color: rgba(255,255,255);
+    width: 65%;
+}
+.cart-card img{
+    width: 100px;
+    height: 100px;
+}
+.cart-card p,h2{
+    text-align: center;
+}

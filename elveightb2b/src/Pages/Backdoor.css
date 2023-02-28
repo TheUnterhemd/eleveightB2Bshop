@@ -1,4 +1,21 @@
 .backdoor{
     display: flex;
+    background-image: url("../pics/front3.jpg");
+    background-size: cover;
+    background-position: center;
     
+}
+
+.backdoor .sidebar{
+    height: 92.3vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.backdoor .sidebar.btn{
+    margin: 0;
+}
+.backdoor .main-container{
+    width: 100%;
 }
