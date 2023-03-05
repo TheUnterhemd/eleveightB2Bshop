@@ -15,7 +15,7 @@ nav img{
 .btn{
     height: 30px;
     width: 100px;
-    margin: 20px;
+    margin: auto;
     transform: skew(-30deg);
     border-radius: 10px 0px 10px 0px;
     background-color: #222227;

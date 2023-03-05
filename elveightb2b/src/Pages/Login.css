@@ -7,8 +7,9 @@
     justify-content: center;
     align-items: center;
 }
-.login .form{
+.login .login-form{
     display: flex;
+    justify-content: center;
     flex-direction: column;
     gap: 1rem;
     border: 2px solid black;
@@ -16,7 +17,7 @@
     padding: 20px;
     background-color: white;
 }
-.form .box{
+.login-form .box{
     display: flex;
     justify-content: space-between;
 

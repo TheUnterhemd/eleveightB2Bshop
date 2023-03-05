@@ -19,7 +19,7 @@ export const Login = () => {
 
   return (
     <div className="login">
-      <form className="form" onSubmit={handleSubmit}>
+      <form className="login-form" onSubmit={handleSubmit}>
       <label className="box">
         <span>Email:</span>
         <input type="email" required onChange={(e)=> setEmail(e.target.value)} value={email} />

@@ -4,19 +4,20 @@ import { useState,useEffect } from 'react';
 export const Cart = () => {
     const items = [];
     const[id,setId] =useState("")
-
+    console.log(items);
     const del = (id) => {
         localStorage.removeItem(`Item ${id}`);
         items.splice(id,1);
         window.location.reload(true);
-        
+        console.log(items);
     }
-
+    const readLocalStorage = () => {
     for (let i = 0; i < localStorage.length; i++) {
         const data = localStorage.getItem(`Item ${i}`);
         const item = JSON.parse(data)
         items.push(item)
-    }
+    }}
+    readLocalStorage()
     
 
   return (
